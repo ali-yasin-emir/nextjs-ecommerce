@@ -1,3 +1,4 @@
+import FormSubmitButton from "@/components/FormSubmitButton";
 import { prisma } from "@/lib/db/prisma";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
@@ -13,6 +14,7 @@ async function addProduct(formData: FormData) {
   const imageUrl = formData.get("imageUrl")?.toString();
   const price = Number(formData.get("price") || 0);
 
+  
   if (!name || !description || !imageUrl || !price) {
     throw new Error("Missing required fields");
   }
@@ -27,7 +29,7 @@ async function addProduct(formData: FormData) {
   });
 
   redirect("/");
-}
+} 
 
 const AddProductPage = () => {
   return (
@@ -68,9 +70,12 @@ const AddProductPage = () => {
             placeholder="Price"
             className="input input-bordered input-lg py-4 text-black"
           />
-          <button type="submit" className="btn btn-primary btn-block text-lg">
+          <FormSubmitButton
+            
+            className="btn-block"
+          >
             Add Product
-          </button>
+          </FormSubmitButton>
         </form>
       </div>
     </div>
