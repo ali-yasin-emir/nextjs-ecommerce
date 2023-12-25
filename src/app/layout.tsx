@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL("http://localhost:3000"),
   title: "Flowmazon",
   description: "We make your wallet cry",
 };
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="p-4 m-auto max-w-7xl min-w-[300px]">          
+        <main className="m-auto min-w-[300px] max-w-7xl">
           {children}
         </main>
       </body>
