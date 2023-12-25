@@ -1,5 +1,4 @@
 import { PrismaClient } from '@prisma/client'
-import { Saira_Condensed } from 'next/font/google'
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined
