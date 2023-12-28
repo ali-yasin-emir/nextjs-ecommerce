@@ -13,7 +13,7 @@ const FormSubmitButton = ({
   className,
   ...props
 }: FormSubmitButtonProps) => {
-  const { pending } = useFormStatus();
+  const { pending,  } = useFormStatus();
 
   return (
     <button

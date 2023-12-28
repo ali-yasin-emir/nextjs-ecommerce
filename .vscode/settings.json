@@ -1,0 +1,7 @@
+{
+    "liveshare.notebooks.allowGuestExecuteCells": true,
+    "liveshare.nameTagVisibility": "Never",
+    "git.alwaysSignOff": false,
+    "gutterpreview.showUnderline": true,
+    "gutterpreview.showImagePreviewOnGutter": false
+}

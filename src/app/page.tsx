@@ -9,9 +9,9 @@ export default async function Home() {
   });
 
   return (
-    <div>
-      <div className="hero rounded-xl bg-base-200">
-        <div className="hero-content flex-col lg:flex-row">
+    <div className="flex flex-col pt-12">
+      <div className="hero rounded-xl bg-base-200 pt-28">
+        <div className="hero-content flex flex-col lg:flex-row gap-24">
           <Image
             src={products[0].imageUrl}
             alt={products[0].name}
@@ -32,8 +32,7 @@ export default async function Home() {
           </div>
         </div>
       </div>
-
-      <div className="my-24 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="my-24 grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-3 xl:gap-6">
         {products.slice(1).map((product) => (
           <ProductCard product={product} key={product.id} />
         ))}
