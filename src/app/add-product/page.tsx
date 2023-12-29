@@ -28,14 +28,17 @@ async function addProduct(formData: FormData) {
     throw new Error("Missing required fields");
   }
 
-  await prisma.product.create({
-    data: {
-      name,
-      description,
-      imageUrl,
-      price,
-    },
-  });
+  for (let i = 0; i <= 50; i++) { // Create 50 products
+    await prisma.product.create({
+      data: {
+        name,
+        description,
+        imageUrl,
+        price,
+      },
+    });
+  }
+
 
   redirect("/");
 } 
@@ -86,8 +89,7 @@ const AddProductPage = async () => {
             placeholder="Price"
             className="input input-bordered input-lg py-4 bg-slate-600 text-lime-400"
           />
-          <FormSubmitButton
-            
+          <FormSubmitButton          
             className="btn-block"
           >
             Add Product
