@@ -52,11 +52,11 @@ const AddProductPage = async () => {
     }
 
   return (
-    <div className="max-sm:mb-36 max-sm:px-12 px-12 flex h-screen justify-center pt-32">
+    <div className="max-sm:mb-36 max-sm:px-12 px-12 flex max-sm:pt-48 h-screen justify-center pt-32">
       <div className="max-container flex w-full flex-col">
         <form
           action={addProduct}
-          className="flex flex-col gap-6 rounded-lg bg-gradient-to-r from-emerald-700 to-blue-400 p-12"
+          className="flex flex-col max-sm:h-[640px] gap-6 rounded-lg bg-gradient-to-r from-emerald-700 to-blue-400 p-12"
         >
           <h1 className="text-2xl text-center font-bold text-emerald-300">Add Product Page</h1>
           <input

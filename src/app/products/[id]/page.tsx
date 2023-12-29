@@ -39,19 +39,18 @@ export default async function ProductPage({
   const product = await getProduct(id);
 
   return (
-    <div className="flex flex-col gap-12 lg:flex-row lg:items-center pt-16 h-screen">
+    <div className="flex flex-col max-sm:px-12 gap-12 lg:flex-row lg:items-center pt-16 max-sm:pt-48 max-sm:mb-32 h-screen">
       <Image
         src={product.imageUrl}
         alt={product.name}
-        width={500}
-        height={500}
-        className="rounded-lg"
+        width={800}
+        height={400}
+        className="rounded-lg max-sm:h-[200px]"
         priority
       />
-
-      <div>
+      <div className="">
         <h1 className="text-5xl font-bold">{product.name}</h1>
-        <PriceTag price={product.price} className="mt-4" />
+        <PriceTag price={product.price} className="mt-8 text-start py-4 text-xl rounded-full text-green-600 font-semibold" />
         <p className="py-6 text-justify">{product.description}</p>
         <AddToCartButton
           productId={product.id}

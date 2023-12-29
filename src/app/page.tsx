@@ -28,10 +28,10 @@ export default async function Home({
   });
 
   return (
-    <div className="flex flex-col items-center pb-20 pt-12">
+    <div className="flex flex-col items-center pb-20 max-sm:pt-48 pt-36 gap-20">
       {currentPage === 1 && (
-        <div className="hero rounded-xl bg-base-200 pt-28">
-          <div className="hero-content flex flex-col gap-24 lg:flex-row">
+        <div className="hero rounded-xl bg-base-200">
+          <div className="hero-content flex flex-col gap-20 max-sm:gap-12 max-sm:px-14 max-sm:pt-8 lg:flex-row">
             <Image
               src={products[0].imageUrl}
               alt={products[0].name}
@@ -42,7 +42,7 @@ export default async function Home({
             />
             <div>
               <h1 className="text-5xl font-bold">{products[0].name}</h1>
-              <p className="py-6">{products[0].description}</p>
+              <p className="py-6 text-justify">{products[0].description}</p>
               <Link
                 href={"/products/" + products[0].id}
                 className="btn btn-primary"
@@ -53,7 +53,8 @@ export default async function Home({
           </div>
         </div>
       )}
-      <div className="my-24 grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-3 xl:gap-6">
+      {/* my-24 grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-3 xl:gap-6 */}
+      <div className="flex flex-wrap gap-12 justify-around">
         {(currentPage === 1 ? products : products.slice(1)).map((product) => (
           <ProductCard product={product} key={product.id} />
         ))}

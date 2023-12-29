@@ -38,7 +38,7 @@ export default async function Navbar() {
               <input
                 name="searchQuery"
                 placeholder="Search"
-                className="input-bordered input w-full min-w-[100px]"
+                className="input-bordered input w-full min-w-[100px] py-2 text-slate-800"
               />
             </div>
           </form>

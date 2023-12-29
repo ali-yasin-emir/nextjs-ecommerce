@@ -55,7 +55,7 @@ const CartEntry = ({ cartItem: { product, quantity }, setProductQuantity }: Cart
           {quantityOptions}
         </select>
       </div>
-      <div className="flex items-center gap-3 w-fit p-2 text-teal-600 font-semibold">
+      <div className="flex items-center gap-3 w-fit pt-2 text-teal-600 font-semibold">
         Total: {formatPrice(product.price * quantity)}
       </div>
       {isPending && <span className="loading loading-spinner loading-sm"/>}

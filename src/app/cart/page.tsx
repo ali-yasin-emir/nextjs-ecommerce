@@ -11,7 +11,7 @@ const CartPage = async () => {
   const cart = await getCart();
 
   return (
-    <div className="flex pb-24 flex-col gap-6 max-md:gap-4 max-md:px-12 pt-24">
+    <div className="flex pb-24 flex-col gap-6 max-md:gap-4 max-md:px-12 pt-24 h-screen">
       <h1 className="py-12 text-3xl font-bold">Shopping Cart</h1>
       {cart?.items.map((cartItem) => (
         <CartEntry
